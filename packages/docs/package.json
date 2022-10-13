@@ -1,5 +1,5 @@
 {
-  "name": "@ignite-ui/docs",
+  "name": "@rodrigo-ignite-ui/docs",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
@@ -18,10 +18,10 @@
     "vite": "^3.1.7"
   },
   "dependencies": {
-    "@ignite-ui/eslint-config": "*",
-    "@ignite-ui/react": "*",
-    "@ignite-ui/tokens": "*",
-    "@ignite-ui/ts-config": "*",
+    "@rodrigo-ignite-ui/eslint-config": "*",
+    "@rodrigo-ignite-ui/react": "*",
+    "@rodrigo-ignite-ui/tokens": "*",
+    "@rodrigo-ignite-ui/ts-config": "*",
     "@storybook/addon-a11y": "^6.5.12",
     "phosphor-react": "^1.4.1",
     "polished": "^4.2.2",

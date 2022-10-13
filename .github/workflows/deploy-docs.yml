@@ -3,7 +3,7 @@ name: Deploy docs
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   build-and-deploy:
@@ -20,9 +20,14 @@ jobs:
       - run: yarn install
 
       - run: npm run build
+        env:
+          TURBO_TOKEN: XEs3K56tA9M9iLIPMNReEgEo
+          TURBO_TEAM: joaorodrigo1996
 
       - name: Deploy storybook
         working-directory: ./packages/docs
         run: npm run deploy-storybook -- --ci --existing-output-dir=storybook-static
         env:
           GH_TOKEN: ${{ github.actor }}:${{ secrets.GITHUB_TOKEN }}
+
+          

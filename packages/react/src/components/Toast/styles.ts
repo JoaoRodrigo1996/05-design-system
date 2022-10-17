@@ -1,7 +1,22 @@
 import * as Toast from '@radix-ui/react-toast'
-import { styled } from '../../styles'
+import { styled, keyframes } from '../../styles'
 
 export const ToastContainer = styled(Toast.Provider, {})
+
+const hide = keyframes({
+  '0%': { opacity: 1 },
+  '100%': { opacity: 0 },
+})
+
+const slideIn = keyframes({
+  from: { transform: `translateX(calc(100% + 25px))` },
+  to: { transform: `translateX(0)` },
+})
+
+const swipeOut = keyframes({
+  from: { transform: 'translateX(var(--radix-toast-swipe-end-x))' },
+  to: { transform: `translateX(calc(100% + 25px))` },
+})
 
 export const ToastRoot = styled(Toast.Root, {
   backgroundColor: '$gray800',
@@ -11,6 +26,29 @@ export const ToastRoot = styled(Toast.Root, {
 
   display: 'flex',
   flexDirection: 'column',
+
+  '@media (prefers-reduced-motion: no-preference)': {
+    '&[data-state="open"]': {
+      animation: `${slideIn} 200ms ease-out`,
+    },
+
+    '&[data-state="close"]': {
+      animation: `${hide} 200ms ease-out`,
+    },
+
+    '&[data-swipe="move"]': {
+      transform: 'translateX(var(--radix-toast-swipe-move-x))',
+    },
+
+    '&[data-swipe="cancel"]': {
+      transform: 'translateX(0)',
+      transition: 'transform 200ms ease-out',
+    },
+
+    '&[data-state="end"]': {
+      animation: `${swipeOut} 200ms ease-out`,
+    },
+  },
 })
 
 export const ToastTitle = styled(Toast.Title, {
@@ -54,3 +92,5 @@ export const ToastViewPort = styled(Toast.Viewport, {
   zIndex: 2147483647,
   outline: 'none',
 })
+
+export const Button = styled('button', {})

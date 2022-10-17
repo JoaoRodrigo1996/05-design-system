@@ -1,0 +1,2 @@
+import{A as t}from"./index.1a418b46.js";import"./index.7e7baab0.js";import"./iframe.eaf4499a.js";import"./index.f0a369d7.js";import"./jsx-runtime.d26d922a.js";const p={title:"Data display/Avatar",component:t,args:{src:"https://github.com/JoaoRodrigo1996.png",alt:"Rodrigo Mesquita"},argTypes:{src:{control:{type:"text"}}}},c={},e={args:{src:void 0}},m=["Primary","WithFallback"];export{c as Primary,e as WithFallback,m as __namedExportsOrder,p as default};
+//# sourceMappingURL=Avatar.stories.4eeea58a.js.map

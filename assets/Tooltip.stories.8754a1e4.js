@@ -1,0 +1,2 @@
+import{e as o}from"./index.1a418b46.js";import"./index.7e7baab0.js";import"./iframe.eaf4499a.js";import"./index.f0a369d7.js";import"./jsx-runtime.d26d922a.js";const s={title:"Surfaces/Tooltip",component:o,args:{children:"26 de Outubro dispon\xEDvel",text:"26"},argTypes:{}},m={},a=["Primary"];export{m as Primary,a as __namedExportsOrder,s as default};
+//# sourceMappingURL=Tooltip.stories.8754a1e4.js.map
